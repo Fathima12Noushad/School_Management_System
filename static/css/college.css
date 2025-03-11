@@ -1,0 +1,78 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    }
+.nav-container {
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    }
+.icons a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    }
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    }
+.class-list {
+    list-style: none;
+    padding: 0;
+    }
+.class-list li {
+    margin: 10px 0;
+    }
+.class-link {
+    display: block;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    }
+.class-link:hover {
+    background: #0056b3;
+    }
+
+.student-list {
+    list-style: none;
+    padding: 0;
+    }
+.student-list li {
+    margin: 10px 0;
+    }
+.student-link {
+    display: block;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    }
+.student-link:hover {
+    background: #218838;
+    }
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: #dc3545;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    }
+.back-button:hover {
+    background: #c82333;
+    }
+

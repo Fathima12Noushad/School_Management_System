@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Students in {{ classroom.name }}{% endblock %}
+
+{% block content %}
+    <h1>Students in {{ classroom.name }}</h1>
+    <ul class="student-list">
+        {% for student in students %}
+            <li>
+                <a href="{% url 'student_detail' student.id %}" class="student-link">
+                    {{ student.roll_no }} - {{ student.name }}
+                </a>
+            </li>
+        {% empty %}
+            <p>No students in this class.</p>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'class_list' %}" class="back-button">Back to Class List</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | School Management{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the School Management System</h1>
+    <p>Your one-stop solution to manage classes and students efficiently.</p>
+    <a href="{% url 'class_list' %}" class="btn">View Classes</a>
+{% endblock %}

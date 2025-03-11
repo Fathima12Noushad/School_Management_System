@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ classroom.name }} - Timetable{% endblock %}
+
+{% block content %}
+    <h1>{{ classroom.name }} - Timetable</h1>
+
+    {% if grouped_timetable %}
+        {% for day, entries in grouped_timetable.items %}
+            <h2>{{ day }}</h2>
+            <table border="1">
+                <tr>
+                    <th>Subject</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Teacher</th>
+                </tr>
+                {% for entry in entries %}
+                    <tr>
+                        <td>{{ entry.subject }}</td>
+                        <td>{{ entry.start_time|time:"h:i A" }}</td>  <!-- Fixed time format -->
+                        <td>{{ entry.end_time|time:"h:i A" }}</td>    <!-- Fixed time format -->
+                        <td>{{ entry.teacher }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    {% else %}
+        <p>No timetable available for this class.</p>
+    {% endif %}
+
+    <a href="{% url 'class_list' %}">Back to Class List</a>
+{% endblock %}
